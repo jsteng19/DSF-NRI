@@ -1,8 +1,8 @@
-This repository illustrates a simple project directory layout. It can be copied as a template; if so, most files and information should be replaced with project files and project-specific information.
 
-# [Working project title]
+# [DSF NRI Project]
 
-A brief description of your project here would help.
+Modeling neurodegeneration in brain organoids by single-cell RNA sequencing
+
 
 ## Organization
 
@@ -17,12 +17,21 @@ Directory | Description
 
 ## Requirements
 
-List any software dependencies.
+R
+RStudio
+Seurat
 
 ## Other information
 
-Provide any info on troubleshooting, known issues or failure modes, contact info, or anything else you'd like to add.
-
 ## Contributors
 
-List contributors who actively push changes.
+Data Science Fellows:
+  Jake Stenger
+  Sara Mandic
+  Nancy Zha
+  
+Researcher:
+  Stella Glasauer 
+  
+Faculty Mentor:  
+  Megan Elcheikhali
