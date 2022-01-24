@@ -1,5 +1,5 @@
 
-# [DSF NRI Project]
+# DSF NRI Project
 
 Modeling neurodegeneration in brain organoids by single-cell RNA sequencing
 
