@@ -17,21 +17,21 @@ Directory | Description
 
 ## Requirements
 
-R
-RStudio
-Seurat
+* R
+* RStudio
+* Seurat
 
 ## Other information
 
 ## Contributors
 
-Data Science Fellows:
-  Jake Stenger
-  Sara Mandic
-  Nancy Zha
+* Data Science Fellows:
+  ** Jake Stenger
+  ** Sara Mandic
+  ** Nancy Zha
   
-Researcher:
-  Stella Glasauer 
+* Researcher:
+  ** Stella Glasauer 
   
-Faculty Mentor:  
-  Megan Elcheikhali
+* Faculty Mentor:  
+  ** Megan Elcheikhali
