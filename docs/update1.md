@@ -78,7 +78,7 @@ Single-cell data is generally high-dimensional: there are more unique genes meas
 1. Drop-seq technique: [Macosko et al. (2015). Highly Parallel Genome-wide Expression Profiling of Individual Cells Using Nanoliter Droplets. Cell, 161(5), 1202-1214.](https://doi.org/10.1016/j.cell.2015.05.002.)
 2. Pasca method: 
 [Pasca et al. (2015). Functional cortical neurons and astrocytes from human pluripotent stem cells in 3D culture. Nature Methods, 12, 671–678.](https://doi.org/10.1038/nmeth.3415) <br />
-Yoon et al. (2019).Reliability of human cortical organoid generation. Nature Methods, 16, 75-78.](https://www.nature.com/articles/s41592-018-0255-0) 
+[Yoon et al. (2019).Reliability of human cortical organoid generation. Nature Methods, 16, 75-78.](https://www.nature.com/articles/s41592-018-0255-0) 
 3. [Current best practices in single-cell RNA-seq analysis: a tutorial](https://www.embopress.org/doi/full/10.15252/msb.20188746)
 4. [A Comprehensive Resource for Induced Pluripotent Stem Cells from Patients with Primary Tauopathies](https://pubmed.ncbi.nlm.nih.gov/31631020/)
 
