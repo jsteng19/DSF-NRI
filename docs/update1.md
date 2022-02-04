@@ -28,6 +28,9 @@ Listed below are some definitions and concepts that are relevant to our project.
 - Protein: Functional units of cells that consist of amino acids
 - Brain Organoids: Structures that can be grown in a dish that mimic aspects of the real human brain 
 - Single Cell RNA Sequencing: Provides transciptional profiling of thousands of individual cells which allows people to understand at the single-cell level what genes are expressed, in what quantities, and how they differ across thousands of cells. 
+
+![](single-cell-graphic.png)
+
 - Drop-seq: a single-cell sequencing technique that isolates single cells in droplets along with a barcoded bead. This bead has lots of molecular handles that pick up mRNA from the cell. Each handle contains two unique codes: one for the entire cell, and one for each handle. This way for each unique sequence read corresponds to a unique cell and a unique mRNA strand 
 - MAPT mutations: 
   - Microtubule-associated protein tau 
