@@ -78,7 +78,7 @@ Single-cell data is generally high-dimensional: there are more unique genes meas
 - All of this requires data integration techniques to account for differences between batches and experiments to account for technical covariates
 
 **References:**
-1. Drop-seq technique: [Macosko et al. (2015). Highly Parallel Genome-wide Expression Profiling of Individual Cells Using Nanoliter Droplets. Cell, 161(5), 1202-1214.](https://doi.org/10.1016/j.cell.2015.05.002.)
+1. Drop-seq technique: [Macosko et al. (2015). Highly Parallel Genome-wide Expression Profiling of Individual Cells Using Nanoliter Droplets. Cell, 161(5), 1202-1214.](https://www.cell.com/fulltext/S0092-8674(15)00549-8)
 2. Pasca method: 
 [Pasca et al. (2015). Functional cortical neurons and astrocytes from human pluripotent stem cells in 3D culture. Nature Methods, 12, 671–678.](https://doi.org/10.1038/nmeth.3415) <br />
 [Yoon et al. (2019).Reliability of human cortical organoid generation. Nature Methods, 16, 75-78.](https://www.nature.com/articles/s41592-018-0255-0) 
