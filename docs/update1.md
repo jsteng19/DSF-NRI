@@ -85,6 +85,12 @@ Single-cell data is generally high-dimensional: there are more unique genes meas
 3. [Current best practices in single-cell RNA-seq analysis: a tutorial](https://www.embopress.org/doi/full/10.15252/msb.20188746)
 4. [A Comprehensive Resource for Induced Pluripotent Stem Cells from Patients with Primary Tauopathies](https://pubmed.ncbi.nlm.nih.gov/31631020/)
 
+## Ethics
+
+Regarding ethics, our project has some unique considerations. Cell samples are taken from patients with disorders such as Alzheimer's, which are then used to generate stem cell lines that are used to create brain organoids. Relevant diagnoses as well as patient gender are recorded, but location and other information is completely anonymized. The patient's entire genome is preserved in the stem cell line, but we are only interested in mutations to one gene, so our digital dataset doesn't include all their genetic information.
+
+Some have also called into question the ethics of generating brain organoids. They are sometimes thought of as "brains in a vat" and people wonder if they could gain conciousness. At this stage, it seems like these fears are unfounded. Synapse formation is limited, and we are seeking to study cell development, not the action potentials that actually make a brain function. Brain organoids today are lower in complexity than mice brains and also receive no sensory input. However, looking into the future as the technology develops it's important to keep ethics in mind.
+
 
 ## Technology
 - R
