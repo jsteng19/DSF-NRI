@@ -71,9 +71,7 @@ Single-cell data is generally high-dimensional: there are more unique genes meas
 - Do achieve this, we will:
     - Identify groupings of similar cells in brain organoids: use preprocessing, dimensionality reduction, clustering and visualization to find cell groupings from high dimensional gene expression data
     - Determine group identities by comparing group gene expression to literature and databases
-    - Using single-cell data from brain organoids with MAPT mutations vs mutation-removed controls, we want to do two main things: 
-        - Find differences in total gene expression, potentially present in all cells
-        - Compare differences in number and features of cell-type clusters
+    - Using single-cell data from brain organoids with MAPT mutations vs mutation-removed controls, we want to compare differences in the population and features of the cell-type clusters
 
 - All of this requires data integration techniques to account for differences between batches and experiments to account for technical covariates
 
