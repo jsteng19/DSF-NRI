@@ -1,0 +1,80 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(Seurat)
+```
+
+```{r}
+organoids <- readRDS("data\\organoids.seurat")
+```
+```{r}
+organoids[["percent.mt"]] <- PercentageFeatureSet(organoids, pattern = "^MT-")
+```
+
+```{r}
+plot1 <- FeatureScatter(organoids, feature1 = "nCount_RNA", feature2 = "percent.mt", group.by = 'Age')
+plot2 <- FeatureScatter(organoids, feature1 = "nCount_RNA", feature2 = "nFeature_RNA", group.by = 'Age')
+plot1 + plot2
+```
+```{r}
+organoids <- NormalizeData(organoids)
+organoids <- FindVariableFeatures(organoids, selection.method = "vst", nfeatures = 2000)
+top10 <- head(VariableFeatures(organoids), 10)
+plot1 <- VariableFeaturePlot(organoids)
+plot2 <- LabelPoints(plot = plot1, points = top10, repel = TRUE)
+plot2
+```
+```{r}
+all.genes <- rownames(organoids)
+# organoids <- ScaleData(organoids, features = all.genes)
+organoids <- ScaleData(organoids)
+
+organoids <- RunPCA(organoids, features = VariableFeatures(object = organoids))
+print(organoids[["pca"]], dims = 1:5, nfeatures = 5)
+VizDimLoadings(organoids, dims = 1:2, reduction = "pca")
+
+```
+```{r}
+DimPlot(organoids, reduction = "pca")
+
+```
+```{r}
+DimHeatmap(organoids, dims = 1:6, cells = 500, balanced = TRUE)
+
+```
+```{r}
+ElbowPlot(organoids)
+```
+
+```{r}
+organoids <- FindNeighbors(organoids, dims = 1:10)
+organoids <- FindClusters(organoids, resolution = 0.5)
+
+organoids <- RunUMAP(organoids, dims = 1:10)
+
+```
+```{r}
+DimPlot(organoids, reduction = "umap", label = TRUE)
+```
+
+```{r}
+organoids.markers <- FindAllMarkers(organoids, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25, min.diff.pct = 0.2)
+```
+
+```{r}
+organoids.markers %>%
+    group_by(cluster) %>%
+    slice_max(n = 2, order_by = avg_log2FC) 
+```
+```{r}
+FeaturePlot(organoids, features = c("NEUROD6"))
+```
+
+```{r}
+count(organoids.markers, cluster)
+```
+
