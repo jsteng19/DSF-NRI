@@ -43,6 +43,8 @@
 - We also worked with the Elbow plot which ranks the principle components based on the percentage of variance explained by each one. This is shown below.
 ![](elbow.png)
 
+- Finally we used UMAP to construct a high dimensional graph representation of the data then optimizes a low-dimension graph to be as structrually similar as possible. The goal of this algorithms is to learn the underlying manifold of the data in order to place similar cells together in low-dimensional space. 
+![](umap.png)
 
 ## Future Goals: 
 - TODO: Fill in 
