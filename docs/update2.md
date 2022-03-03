@@ -20,7 +20,15 @@
 - TODO: Fill in 
 
 ## Inital Efforts: 
-- TODO: FIll in 
+- TODO: Fill in 
 
-## Data Processing: 
+## Current Work:
+- Primarily we took our data and used a violin plot to filter cells with unique features counts over 2,500 or less than 200. In addition we filtered cells that had >5% mitochondrial counts. 
 
+- We continued our work by looking at feature-feature relationships within our data. 
+![](featurescatter.png)
+
+
+
+## Future Goals: 
+- TODO: Fill in 
