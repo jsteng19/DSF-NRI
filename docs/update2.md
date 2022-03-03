@@ -17,9 +17,7 @@
 - Neuroscience Research Institute 
 
 ## Additional Background:
-- TODO: Fill in 
-- Elbow plot
-- Jackstraw 
+- TODO: Fill in  
 
 ## Inital Efforts: 
 - TODO: Fill in 
