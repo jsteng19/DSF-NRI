@@ -18,6 +18,8 @@
 
 ## Additional Background:
 - TODO: Fill in 
+- Elbow plot
+- Jackstraw 
 
 ## Inital Efforts: 
 - TODO: Fill in 
@@ -28,6 +30,19 @@
 - We continued our work by looking at feature-feature relationships within our data. 
 ![](featurescatter.png)
 
+- Afterwards, we normalized the data and then used the normalized data to identify highly varaible fatures. These features are ones that exhibit high cell-to-cell variation (they are highly expressed in some cells and lowly expressed in others)
+![](highly_variable.png)
+
+- Next we scaled the data and performed PCA on our data. The plots below show different ways of visualizing both cells and features that define the PCA. 
+![](VizDimLoading.png)
+![](DimPlot.png)
+![](DimHeatMap.png)
+
+- To overcome the techincal noise from single feature RNA sequencing data it is necessary to determine the top principal components in order to represent a robust compression of the dataset. So, we used Jack Straw plots and Elbow plots to achieve this. Primarily we used a Jack Straw plot to compare the distribution of p-values for each PC with a uniform distribution. Significant PCs show a strong enrichment of features with low p-values (solid curve above the dashed line). 
+![](jackstraw.png)
+
+- We also worked with the Elbow plot which ranks the principle components based on the percentage of variance explained by each one. This is shown below.
+![](elbow.png)
 
 
 ## Future Goals: 
