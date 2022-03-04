@@ -1,4 +1,3 @@
-## NRI Group Update 1
 
 ## Team Information
 
@@ -16,11 +15,29 @@
 **Research Lab:**
 - Neuroscience Research Institute 
 
-## Additional Background:
-- TODO: Fill in  
+## Background:
+A short refresher on our project and goals: NRI is using brain organoids, which are living 3D cell blobs, to study causes of neurodegeneration. They are generated from stem cells which were sampled from patients with mutations associated with neurodegenerative diseases, and also from control cell lines where the mutation is edited out. The data spans across several different mutations and brain organoid ages. Single-cell sequencing is used, which counts the expression of known mRNA sequences within each individual cell of an organoid. Our dataset consists of about 22 thousand features (gene expression counts) for ~ 76 thousand cells. We are using R with packages built specifically for single-cell and gene analysis.
 
 ## Inital Efforts: 
-- TODO: Fill in 
+- Our first step was to preprocess the data. Some preliminary quality control steps were already taken: filtering out cells with extremely high or low total gene counts, or very high proportions of mitochontria-associated genes (an indicator of dead cells).
+
+- Normalization is a necessary step before analysis because there is high variation in the raw gene counts introduced by the process of measurement: two identical cells could produce very similar gene counts per million, but one could have double the total counts  (sequencing depths). We tried both simple log-normalization and SC-transform:
+
+    - Simple log-normalization assumes every cell should have the same total amount of gene expression, scales accordingly, and log-transforms the result
+    - SC (single cell) transform is a more statistically complex method: it models the effect of sequencing depth on the expression level of each individual gene with a generalized linear model, and regresses it out. Not just the sequencing depth can be regressed out: any independent technical covariates (like experiment batch) can be regressed out 
+
+- Reducing the computational complexity is necessary for clustering given the size of our dataset. We calculate the standardized variance across cells and select the most variable genes. The number of genes to include is another parameter that affects clustering. 
+
+- To deal with the curse of dimensionality, we used principal component analysis. A tough question is how many components to use in downstream analysis: we plotted heatmaps to visualize how gene expression varies between cells on the extreme ends of each compenent. We also plotted the standard deviation of each PC. Along with these heuristics and advice from literature, we also used some brute force iteration to see how clustering was affected.
+
+- Clustering: we don't know exactly how many cell types are present in the data, so a flexible clustering algorithm is needed. Seurat implements the Louvain algorithm, which generates a graph that connects points close in the PCA space and and also connects each point to its neighbors' neighbors. Then highly connected neighborhoods are chosen as clusters. This algorithm has parameters that affect cluster sizes.
+
+- Visualization: to evaluate clustering, we need to capture more than just two PCA dimensions visually. For this, a non-linear method is needed that captures both global and local features. We used UMAP which is popular for this task. Using this visualization we can gauge whether the clustering is too wide (not enough clusters) or too narrow (too many clusters).
+
+- Differential expression: Using a statistical test, we determine which genes stand out in each cluster compared to all the cells. So far we've been using the Wilcoxon test (non-parametric, similar to Student's-t test)
+
+- 
+
 
 ## Current Work:
 - Primarily we took our data and used a violin plot to filter cells with unique features counts over 2,500 or less than 200. In addition we filtered cells that had >5% mitochondrial counts. 
@@ -48,3 +65,4 @@
 
 ## Future Goals: 
 - TODO: Fill in 
+Talk about finding gene ontologies for each cluster, 
