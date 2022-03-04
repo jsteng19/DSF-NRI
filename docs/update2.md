@@ -54,10 +54,7 @@ A short refresher on our project and goals: NRI is using brain organoids, which 
 ![](DimPlot.png)
 ![](DimHeatMap.png)
 
-- To overcome the techincal noise from single feature RNA sequencing data it is necessary to determine the top principal components in order to represent a robust compression of the dataset. So, we used Jack Straw plots and Elbow plots to achieve this. Primarily we used a Jack Straw plot to compare the distribution of p-values for each PC with a uniform distribution. Significant PCs show a strong enrichment of features with low p-values (solid curve above the dashed line). 
-![](jackstraw.png)
-
-- We also worked with the Elbow plot which ranks the principle components based on the percentage of variance explained by each one. This is shown below.
+- To overcome the techincal noise from single feature RNA sequencing data it is necessary to determine the top principal components in order to represent a robust compression of the dataset. We worked with the Elbow plot which ranks the principle components based on the percentage of variance explained by each one. This is shown below.
 ![](elbow.png)
 
 - Finally we used UMAP to construct a high dimensional graph representation of the data then optimizes a low-dimension graph to be as structrually similar as possible. The goal of this algorithms is to learn the underlying manifold of the data in order to place similar cells together in low-dimensional space. 
