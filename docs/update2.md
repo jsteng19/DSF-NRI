@@ -72,6 +72,8 @@ Downstream Analysis:
 After all the preprocessing steps, we will focus on downstream analysis, connecting data with prior biological knowledge like genome annotation information with the help of existing databases, and making biological interpretations of our data in the future. The downstream analysis will be divided into cell and gene approaches. With the cell level approach, we will annotate and analyze clusters to infer the identity of cells. 
 
 With the gene approach, since it is not intuitive and appropriate to directly compare the obtained huge number of differential genes, we need to annotate these differential genes and group them into several categories. After that, we will compare the similarities and differences of the grouped categories for functional or compositional analysis. On a gene level, we will use the website Metascape and a R package called topGO to perform gene set enrichment analysis and build gene regulatory networks. Enrichment tests show whether a list of genes are significantly enriched in a certain type of category that is annotated in existing databases and help to infer the biological meaning of differentially expressed genes between samples. 
-    - [Metascape](https://metascape.org/gp/index.html#/main/step1): A web-based tool that analyzes and visualizes enrichment of gene lists. 
-    - [topGO](https://bioconductor.org/packages/release/bioc/html/topGO.html): A R package designed for gene set enrichment analysis for Gene Ontology terms. It computes gene enrichment using two statistical tests: Kolmogorov-Smirnov test based on gene scores(differential expression level) and Fisher’s exact test based on gene counts. 
+   
+   - [Metascape](https://metascape.org/gp/index.html#/main/step1): A web-based tool that analyzes and visualizes enrichment of gene lists. 
+   
+   - [topGO](https://bioconductor.org/packages/release/bioc/html/topGO.html): A R package designed for gene set enrichment analysis for Gene Ontology terms. It computes gene enrichment using two statistical tests: Kolmogorov-Smirnov test based on gene scores(differential expression level) and Fisher’s exact test based on gene counts. 
 
