@@ -1,0 +1,92 @@
+```{r}
+library(Seurat)
+library(dplyr)
+```
+
+```{r}
+organoids.sct <- readRDS('/data/NRICapstone2022/organoids.seurat')
+```
+
+
+```{r}
+organoids.sct <- SetIdent(organoids.sct, value = "orig.ident")
+
+```
+
+```{r}
+organoids.sct[["percent.mt"]] <- PercentageFeatureSet(organoids.sct, pattern = "^MT-")
+
+```
+
+
+```{r}
+organoids.sct <- SCTransform(organoids.sct, vars.to.regress = c("percent.mt"), method = "glmGamPoi", variable.features.n = NULL, ncells = 10000,)
+```
+
+
+```{r}
+top10 <- head(VariableFeatures(organoids.sct), 10)
+plot1 <- VariableFeaturePlot(organoids.sct)
+plot2 <- LabelPoints(plot = plot1, points = top10, repel = TRUE)
+plot2
+```
+
+```{r}
+organoids.sct <- RunPCA(organoids.sct, features = VariableFeatures(object = organoids.sct))
+print(organoids.sct[["pca"]], dims = 1:5, nfeatures = 5)
+VizDimLoadings(organoids.sct, dims = 1:2, reduction = "pca")
+
+```
+
+```{r}
+DimPlot(organoids.sct, reduction = "pca")
+
+```
+```{r}
+DimHeatmap(organoids.sct, dims = 1:12, cells = 500, balanced = TRUE)
+
+```
+```{r}
+ElbowPlot(organoids.sct)
+```
+
+```{r}
+organoids.sct <- FindNeighbors(organoids.sct, dims = 1:15)
+organoids.sct <- FindClusters(organoids.sct, resolution = 0.3)
+
+```
+
+
+```{r}
+organoids.sct <- RunUMAP(organoids.sct, dims = 1:15)
+DimPlot(organoids.sct, reduction = "umap", label = TRUE)
+```
+
+```{r}
+organoids.sct.markers <- FindAllMarkers(organoids.sct, only.pos = TRUE,)
+```
+
+```{r}
+organoids.sct.markers %>%
+    group_by(cluster) %>%
+    slice_max(n = 2, order_by = avg_log2FC) 
+```
+```{r}
+markers.with.identities <- merge(organoids.sct.markers, marker.genes)
+markers.with.identities <- arrange(markers.with.identities, cluster)
+markers.with.identities
+```
+```{r}
+new.cluster.ids <- c("Pyramidal Excitatory Neurons", "Astrocytes", "Inhibitory neurons derived from ganglionic eminences", "Inhibitory neurons", "Radial glia", 
+                     "?", "General glia markers", "Excitatory Neurons", "Radial glia 2", "Astrocytes 2", "Pyramidal Excitatory Neurons 2")
+names(new.cluster.ids) <- levels(organoids.sct)
+organoids.sct <- RenameIdents(organoids.sct, new.cluster.ids)
+DimPlot(organoids.sct, reduction = "umap", label = TRUE, pt.size = 0.5) + NoLegend()
+```
+
+
+
+```{r}
+FeaturePlot(organoids.sct, features = filter(marker.genes, cell_identity == "General glia markers")$gene)
+```
+
