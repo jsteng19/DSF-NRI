@@ -2,6 +2,7 @@
 ## NRI Group Update 3
 
 ## Current Efforts 
+In the past month we have spent a lot of our time performing different [methods??, experiments??] on our data. Primarily we started off by using sctransform to normalize our data in order to recover sharper biological distinction compared to log-normalization. After doing so we performed dimensionality reduction by PCA and UMAP embedding as mentioned in update 2. Then we continued by performing differential expression tests on our data. We were testing differential expression between the mutant and the control cell groups specifically the 337VM, 406RW, and 406WW mutations (The 337VM mutation is 3 lines, 406RW is a 2 line mutation and 406WW is a 1 line mutation). 
 
 ## Findings
 
