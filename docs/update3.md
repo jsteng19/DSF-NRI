@@ -10,7 +10,7 @@ We have broken up our future on a week by week basis in order to keep ourselves 
 - Week 5: 
   - We will finish working with DE 
   - We will introduce Monocole3 
-    - Monocle 3 can help you perform three main types of analysis:
+    - Monocle3 can help you perform three main types of analysis:
       - Clustering, classifying, and counting cells. Single-cell RNA-Seq experiments allow you to discover new (and possibly rare) subtypes of cells. Monocle 3 helps you identify them.
       - Constructing single-cell trajectories. In development, disease, and throughout life, cells transition from one state to another. Monocle 3 helps you discover these transitions.
       - Differential expression analysis. Characterizing new cell types and states begins with comparisons to other, better understood cells. Monocle 3 includes a sophisticated, but easy-to-use system for differential expression.
@@ -24,5 +24,6 @@ We have broken up our future on a week by week basis in order to keep ourselves 
   - We will wrap up with WGCNA
 - Week 9/10:
   - Wrap up everything
+    - look at all the results we have from DE, Metascape, Monocle3, WGCNA
   - Start finalizing presentation and poster 
   - Practice for presentation
