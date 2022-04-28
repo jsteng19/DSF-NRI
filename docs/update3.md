@@ -4,7 +4,7 @@
 ## Current Efforts 
 In the past month we have spent a lot of our time performing different statistical methods on our data. Primarily we started off by using sctransform to normalize our data in order to recover sharper biological distinction compared to log-normalization. After doing so we performed dimensionality reduction by PCA and UMAP embedding as mentioned in update 2. During week 2 and week 3, we revised our manual cell type identification last quarter and explored beyond our original plan of manual annotation. We utilized tools like [SingleR](https://bioconductor.org/packages/release/bioc/html/SingleR.html) and [ScType](http://session.asuscomm.com/) to automatically annotate cell types. Though these results confirmed the correctness of our results, we still chose to utilize the manual result because the automatic cell types are too broad to have further inference. We sent our manual annotation results to the kosik lab and obtained the verified final result. Then, we continued by performing differential expression tests on our data. We tested differential expression between the mutant and the control(wildtype) cell groups, specifically the 337VM, 406RW, and 406WW mutations. 
 
-![Mutant vs. Control Cells](docs/Mutant vs. Control Cells.png)
+<img width="901" alt="Mutant vs  Control Cells" src="https://user-images.githubusercontent.com/76935431/165862631-cd6dab24-1dcb-4fca-9d70-0f3eb78d8b48.png">
 The 337VM mutation is a 3 line mutation, 406RW is a 2 line mutation and 406WW is a 1 line mutation.
 
 ## Findings
