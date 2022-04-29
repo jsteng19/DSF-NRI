@@ -18,20 +18,20 @@ The 337VM mutation is a 3 line mutation, 406RW is a 2 line mutation and 406WW is
 Finding ontology differences between control and mutant cell lines through enrichment analysis on differentially expressed genes yielded some interesting results. 
 We found that looking at an individual mutation and its control yielded the most interesting ontologies, particularly for the 406 mutation. Perhaps this is because differences between cell lines (taken from different donors) could overpower differences between our variable of interest, control vs. mutant. 
 
-| ![two_line_upreg.png](update3_figures\two_line_upreg.png) | 
+| ![two_line_upreg.png](update3_figures/two_line_upreg.png) | 
 |:--:| 
 | *Ontologies upregulated in 406 mutation vs control* |
 
 Generally, ontology analyses yielded a mix of interesting and seemingly irrelevant results. Key ontologies upregulated in in the mutant line were **neuron projection development**, **Parkinson disease**, **regulation of nervous system development**, **positive regulation of neuron death**, and **negative regulation of microtubule polymerization or depolymerization**. The The tauopathies we are studying are closely tied to Alzhiemer's and other neurodegenerative diseases, but is not closely linked to Parkinson's, so that ontology is an interesting result. Overall, it is encouraging that many ontologies associated with neurodegeneration (neuron death, etc) are present. Upregulation of negative regulation of microtubule polymerization or depolymerization also reflects the current literature; the leading proposed mechanism of taupathy is neurofibrillary tangles caused by malformed tau proteins, which disrupt microtubule formation (polymerization) and can cause them to dissociate (depolymerization). Microtubules are key to cell structure as well as intracellular transport, and affect many key functions in neurons. This can explain the wide range of observed effects of the mutation. 
 
-| ![two_line_downreg.png](update3_figures\two_line_downreg.png) | 
+| ![two_line_downreg.png](update3_figures/two_line_downreg.png) | 
 |:--:| 
 | *Ontologies downregulated in 406 mutation vs control* |
 
 Downreguled ontologies had equally interesting results. Ribosomes, which are organelles that produce proteins (translation) appear to be downregulated. **Positive regulation of translation** is also downregulated. This all points to a picture of the mutation, perhaps indirectly, reducing the formation of new proteins in brain cells, which could trigger wide-ranging consequences. This finding was first proposed in a [paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4719006/) in 2016.
 
 We also wanted to use our clustering results to see how the mutation affects gene expression associated with different types of cells. 
-| ![two_line_upreg_featureplot.png ](update3_figures\two_line_downreg_featureplot.png) | 
+| ![two_line_upreg_featureplot.png ](update3_figures/two_line_downreg_featureplot.png) | 
 |:--:| 
 | *Average cell expression of genes downregulated in mutant line* |
 
