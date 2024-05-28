@@ -2,11 +2,10 @@
 # DSF NRI Project
 
 Modeling neurodegeneration in brain organoids by single-cell RNA sequencing
-
+[Project Website](https://centralcoastdatascience.org/projects/all/2022/modeling-neurodegeneration-single-cell-rna-sequencing)
+[Poster](https://centralcoastdatascience.org/sites/default/files/2022-06/nri-poster.pdf)
 
 ## Organization
-
-Describe how your repository is organized. What is found in each directory? Consider also mentioning explicitly any especially important or 'main' files.
 
 Directory | Description 
 ---|---
@@ -20,8 +19,6 @@ Directory | Description
 * R
 * RStudio
 * Seurat
-
-## Other information
 
 ## Contributors
 
